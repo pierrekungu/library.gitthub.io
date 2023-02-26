@@ -1,0 +1,31 @@
+{% extends "layout1.html" %}
+
+{% block title %}
+    Message History
+{% endblock %}
+
+{% block main %}
+<div class="search-box">
+    <h2><span class="badge rounded-pill text-bg-info" color="green">Message History</span></h2>
+</div>
+    <div class="mb-3">
+            <table class="table table-success table-striped">
+                <thead>
+                    <tr class="table-warning">
+                        <th>Message</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for message in messages %}
+                <tr>
+                    <td>{{ message["message"] }}</td>
+                    <td>{{ message["date"]  }}</td>
+                    <td>{{ message["time"] }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+        </div>
+{% endblock %}

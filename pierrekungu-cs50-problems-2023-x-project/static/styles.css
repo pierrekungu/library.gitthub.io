@@ -1,0 +1,220 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  body {
+    background-image: url("back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .container {
+    position: absolute;
+    max-width: 800px;
+    height: 500px;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .myRightCtn {
+    position: relative;
+    background-image: linear-gradient(45deg, #f046ff, #9b00e8);
+    border-radius: 25px;
+    height: 100%;
+    padding: 25px;
+    color: rgb(192, 192, 192);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+  }
+  .myLeftCtn {
+    position: relative;
+    background: #fff;
+    border-radius: 25px;
+    height: 100%;
+    padding: 25px;
+    padding-left: 50px;
+    max-width: 400px;
+  }
+  .myLeftCtn header {
+    color: blueviolet;
+    font-size: 24px;
+    font-weight: 700;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  .row{
+  height: 100%;
+  }
+  .myCard {
+    margin-left: 170px;
+    max-width: 800px;
+    position: relative;
+    background: #fff;
+    height: 100%;
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+  }
+  .myRightCtn header {
+    color: #fff;
+    font-size: 40px;
+  }
+  .myRightCtn p {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .box {
+    position: relative;
+    margin: 20px;
+    margin-bottom: 100px;
+  }
+  .myLeftCtn .myInput {
+    width: 230px;
+    border-radius: 25px;
+    padding: 10px;
+    padding-left: 50px;
+    border: none;
+    -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+  }
+  .myLeftCtn .myInput:focus {
+    outline: none;
+  }
+  #flash{
+    position: relative;
+    margin-left: 300px;
+    margin-right: 300px;
+    opacity: 75%;
+    color: #000;
+    z-index: 1;
+  }
+  .myForm {
+    position: relative;
+    margin-top: 50px;
+  }
+  .myLeftCtn .butt {
+    background: linear-gradient(45deg, #bb36fd, #9b00e8);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+    margin-right: 5px;
+    margin-left: 5px;
+    width: 130px;
+  }
+  .myLeftCtn .butt-disable {
+    background: #adb5bd;
+    color: #555;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+    margin-right: 5px;
+    margin-left: 5px
+  }
+  .myLeftCtn .butt-disable:hover{
+    background: #adb5dd;
+    transition: background 1s;
+  }
+  .myLeftCtn .butt button{
+    cursor: pointer;
+    transition: background 1s;
+    flex-basis: 48%;
+  }
+  .myLeftCtn .butt:hover {
+    background: linear-gradient(45deg, #c85bff, #b726ff);
+  }
+  .myLeftCtn .butt:focus {
+    outline: none;
+  }
+  .myLeftCtn .fas {
+    position: relative;
+    color: #bb36fd;
+    left: 36px;
+  }
+  .butt_out {
+    background: transparent;
+    color: #fff;
+    width: 120px;
+    border: 2px solid#fff;
+    border-radius: 25px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+  }
+  .butt_out:hover {
+    border: 2px solid#eecbff;
+  }
+  .butt_out:focus {
+    outline: none;
+  }
+
+.form-select1{
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.select{
+    background: #6f42c1;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px #2a2f3b solid;
+    border-radius: 0.5em;
+    padding: 0.45em;
+    cursor: pointer;
+    transition: background 0.5s;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 75px;
+  }
+
+.select:hover{
+    background: #6f42a0;
+}
+
+.btn-field{
+    width: 100%;
+    display: flex;
+    margin-left: 45px;
+    margin-right: 45px;
+    max-height: 65px;
+    transition: max-height 1.5s;
+    overflow: hidden;
+}
+
+.btn-field button{
+    cursor: pointer;
+    transition: background 1s;
+    flex-basis: 48%;
+  }
+
+  .form-group{
+    max-height: 65px;
+    transition: max-height 1.5s;
+    overflow: hidden;
+  }
+.side_menu{
+  position: relative;
+  z-index: 1;
+}
+#parent_search{
+  position: relative;
+  z-index: 0;
+}

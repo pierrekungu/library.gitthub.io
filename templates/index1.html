@@ -1,0 +1,39 @@
+{% extends "layout1.html" %}
+
+{% block title %}
+    Current Books
+{% endblock %}
+
+{% block main %}
+    <div class="mb-3">
+        <h2><span class="badge rounded-pill text-bg-info" color="green">Books You've Been Issued</span></h2>
+            <table class="table table-success table-striped">
+                <thead>
+                    <tr class="table-warning">
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Date Requested</th>
+                        <th>Due Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for book in books %}
+                <tr>
+                    <td>{{ book["title"] }}</td>
+                    <td>{{ book["author"]  }}</td>
+                    <td>{{ book["publisher"]  }}</td>
+                    <td>{{ book["issue_date"]  }}</td>
+                    <td>{{ book["due_date"]  }}</td>
+                    <td>
+                        <form action="/index1" method="post">
+                            <button class="btn btn-primary" name="book_id" id="book_id" value="{{ book['id'] }}" type="submit">Return</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+        </div>
+{% endblock %}

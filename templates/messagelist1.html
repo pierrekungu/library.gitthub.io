@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Messages
+{% endblock %}
+
+{% block main %}
+<div id="parent_search">
+    <div class="mb-3">
+        <h2><span class="badge rounded-pill text-bg-info" color="green">Messages</span></h2>
+    </div>
+    <div class="search-box">
+        <form action="/messagelist" method="post">
+            <button class="btn-search" autocomplete="off" ><i class="fa fa-search"></i> </button>
+            <input type="text" class="input-search" id="search" name="search" placeholder="Enter Student ID...">
+        </form>
+      </div>
+</div>
+
+    <div class="mb-3">
+        <table class="table table-success table-striped">
+            <thead>
+                <tr class="table-warning">
+                    <th>Student ID</th>
+                    <th>Message</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for message in messages %}
+            <tr>
+                <td>{{ message["student_id"] }}</td>
+                <td>{{ message["message"] }}</td>
+                <td>{{ message["date"]  }}</td>
+                <td>{{ message["time"] }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+        </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "layout1.html" %}
+
+{% block title %}
+    Current Books
+{% endblock %}
+
+{% block main %}
+<div class="mb-3">
+    <form action="/messages" method="post">
+        <div class="inp-border a2">
+            <input class="input" type="text" name="message" required placeholder="Input Message...">
+        </div>
+        <button class="btn btn-primary" name="send" id="send" type="submit">Send</button>
+      </form>
+      <form action="/messagelist" method="post">
+        <button class="btn btn-secondary" name="previous" id="previous" type="submit">Previous Messages</button>
+    </form>
+</div>
+{% endblock %}

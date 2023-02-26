@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Edit Book
+{% endblock %}
+
+{% block main %}
+    <div class="mb-3">
+            <table class="table table-success table-striped">
+
+                <thead class="table-warning">
+                    <th></th>
+                    <th>Update Book Details</th>
+                </thead>
+                <tbody>
+                <form action="/edit" method="post">
+                    <input type="hidden" name="book_id" value='{{ book[0]["id"] }}'>
+                    <tr>
+                        <td>Book Title</td>
+                        <td><input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="title" name="title" placeholder="{{ book[0]['title'] }}" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Author</td>
+                        <td><input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="author" name="author" placeholder="{{ book[0]['author'] }}" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Publisher</td>
+                        <td><input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="publisher" name="publisher" placeholder="{{ book[0]['publisher'] }}" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Stock</td>
+                        <td><input class="form-control mx-auto w-auto" id="stock" name="stock" placeholder="{{ book[0]['stock'] }}" type="number" min="0" step="1"></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn btn-primary" type="submit">Confirm</button></td>
+                    </tr>
+                </form>
+
+
+                </tbody>
+              </table>
+        </div>
+{% endblock %}

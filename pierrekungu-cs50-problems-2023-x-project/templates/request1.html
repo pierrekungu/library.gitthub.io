@@ -1,0 +1,49 @@
+{% extends "layout1.html" %}
+
+{% block title %}
+    Book Request
+{% endblock %}
+
+{% block main %}
+<div id="parent_search">
+    <div class="mb-3">
+        <h2><span class="badge rounded-pill text-bg-info" color="green">Request Book</span></h2>
+    </div>
+    <div class="search-box">
+        <form action="/request1" method="post">
+            <button class="btn-search" autocomplete="off" ><i class="fa fa-search"></i> </button>
+            <input type="text" class="input-search" id="search" name="search" placeholder="Type Book Title...">
+        </form>
+      </div>
+</div>
+    <div class="mb-3">
+            <table class="table table-success table-striped">
+                <thead>
+                    <tr class="table-warning">
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Stock</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for book in books %}
+                <tr>
+                    <td class="table-primary">{{ book["id"] }}</td>
+                    <td>{{ book["title"] }}</td>
+                    <td>{{ book["author"]  }}</td>
+                    <td>{{ book["publisher"]  }}</td>
+                    <td>{{ book["stock"] }}</td>
+                    <td>
+                        <form action="/request1" method="post">
+                            <button class="btn btn-primary" name="book_id" id="book_id" value="{{ book['id'] }}" type="submit">Request</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+        </div>
+{% endblock %}
